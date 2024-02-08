@@ -4,42 +4,88 @@ body {
     padding: 0;
 }
 
-.container {
-    display: flex;
-    justify-content: space-around;
-    align-items: center;
-    height: 100vh;
-}
-
-.example {
-    width: 100px;
-    height: 50px;
-    background-color: #3498db;
-    color: #fff;
+header {
+    background-color: #333;
+    color: white;
     text-align: center;
-    line-height: 50px;
+    padding: 10px;
+}
+
+.container {
+    max-width: 800px;
+    margin: 0 auto;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+}
+
+.input-section {
+    box-sizing: border-box;
+    width: calc(33.33% - 20px); /* El 20px representa el margen derecho e izquierdo */
+    margin-bottom: 20px;
+    padding: 10px;
+    border: 2px solid #333;
+}
+
+.label-section {
+    box-sizing: border-box;
+    width: calc(33.33% - 20px);
+    margin-bottom: 20px;
+    padding: 10px;
+    border: 2px solid #333;
+}
+
+.button-section {
+    box-sizing: border-box;
+    width: calc(33.33% - 20px);
+    margin-bottom: 20px;
+    padding: 10px;
+    border: 2px solid #333;
+}
+
+.calculator-section {
+    box-sizing: border-box;
+    width: calc(33.33% - 20px);
+    margin-bottom: 20px;
+    padding: 10px;
+    border: 2px solid #333;
+}
+
+label {
+    display: block;
+    margin-bottom: 5px;
+}
+
+button {
+    margin-top: 5px;
     cursor: pointer;
-    margin: 10px;
 }
 
-.example:hover {
-    background-color: #2980b9;
+footer {
+    background-color: #333;
+    color: white;
+    text-align: center;
+    padding: 10px;
+    position: fixed;
+    bottom: 0;
+    width: 100%;
 }
 
-
-.jumpAndRotate {
-    animation: jumpAndRotateAnimation 0.5s ease-in-out 3;
+#interesante.girar-rebotar {
+    animation: girarRebotar 1s ease-in-out;
 }
 
-
-@keyframes jumpAndRotateAnimation {
+@keyframes girarRebotar {
     0%, 20%, 50%, 80%, 100% {
-        transform: translateY(0);
+        transform: rotate(0) translateY(0);
     }
     40% {
-        transform: translateY(-20px) rotate(360deg);
+        transform: rotate(0) translateY(-30px);
     }
     60% {
-        transform: translateY(-10px) rotate(360deg);
+        transform: rotate(0) translateY(-15px);
+    }
+    100% {
+        transform: rotate(360deg) translateY(0);
     }
 }
