@@ -310,11 +310,11 @@ document.addEventListener('DOMContentLoaded', function () {
 
     campos.forEach(campo => {
         campo.addEventListener('focus', function () {
-            this.classList.add('zoom-effect'); // Agregar la clase de efecto de zoom
+            this.classList.add('zoom-effect');
         });
 
         campo.addEventListener('blur', function () {
-            this.classList.remove('zoom-effect'); // Quitar la clase de efecto de zoom al perder el foco
+            this.classList.remove('zoom-effect');
         });
     });
 });
