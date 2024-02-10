@@ -4,43 +4,58 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="estilo.css">
-    <title>Título de tu Página</title>
+
+    <title>Laboratorio 2 Semana 4</title>
 </head>
 <body>
     <header>
-        <h1>Laboratorio 2 progra</h1>
+        <h1>Laboratorio 2 Programación</h1>
     </header>
-
+    <br>
     <div id="container" class="container">
         <div class="input-section section1">
-            <label for="input1">Campo 1:</label>
-            <input id="input1" placeholder="Escribe algo">
-            <button id="alerta1" type="button">Click aquí</button>
-            <label id="texto1">Texto original</label>
+            <label for="input1">Grados Celsius:</label>
+            <input id="input1" placeholder="Ingresa los grados Celsius" type="number">
+            <button class="btn" id="convertir" type="button">Convertir a Fahrenheit</button>
+            <p id="resultado"></p>
         </div>
-
+    
         <div class="input-section section2">
-            <label for="input2">Campo 2:</label>
-            <input id="input2" placeholder="Escribe algo">
-            <button id="alerta2" type="button">Click aquí</button>
-            <label id="texto2">Texto original</label>
+            <label for="medida">Medida:</label>
+            <input id="medida" placeholder="Ingresa la medida" type="number">
+            <select id="unidadOrigen">
+                <option value="metros">Metros</option>
+                <option value="centimetros">Centímetros</option>
+                <option value="pulgadas">Pulgadas</option>
+            </select>
+            <!-- Agrega el select para la unidad de destino -->
+            <select id="unidadDestino">
+                <option value="metros">Metros</option>
+                <option value="centimetros">Centímetros</option>
+                <option value="pulgadas">Pulgadas</option>
+            </select>
+            <button class="btn" id="convertirMedida" type="button">Convertir</button>
+            <p id="resultadoMedida"></p>
         </div>
-
+        
+        
+    
         <div class="button-section section3">
-            <button id="interesante" type="button">Click ver más colores</button>
+            <button class="btn" id="interesante" type="button">Click para ver más colores</button>
         </div>
 
         <div class="calculator-section section4">
             <label for="carrera">Selecciona tu carrera:</label>
             <select id="carrera">
+                <option value="" disabled selected>Elije una carrera</option>
                 <option value="medicina">Medicina</option>
                 <option value="arquitectura">Arquitectura</option>
                 <option value="ingenieria-sistemas">Ingeniería en Sistemas</option>
                 <option value="redes-informaticas">Redes Informáticas</option>
-                <!-- Agrega las demás carreras aquí -->
+
             </select>
 
-            <button id="seleccionarCarrera" type="button">Seleccionar Carrera</button>
+            <button class="btn" id="seleccionarCarrera" type="button">Seleccionar Carrera</button>
 
             <p id="carreraSeleccionada"></p>
         </div>
@@ -52,17 +67,17 @@
             <label for="tiempo">Tiempo (horas):</label>
             <input id="tiempo" placeholder="Ingresa el tiempo" type="number">
 
-            <button id="calcular" type="button">Calcular</button>
+            <button class="btn" id="calcular" type="button">Calcular</button>
 
-            <p id="resultado"></p>
+            <p id="resultadotiempo"></p>
         </div>
         <div class="input-section section5">
             <label for="numero1">Número 1:</label>
             <input id="numero1" placeholder="Ingresa un número" type="number">
-
+        
             <label for="numero2">Número 2:</label>
             <input id="numero2" placeholder="Ingresa otro número" type="number">
-
+        
             <label for="operacion">Operación:</label>
             <select id="operacion">
                 <option value="suma">Suma</option>
@@ -70,11 +85,12 @@
                 <option value="multiplicacion">Multiplicación</option>
                 <option value="division">División</option>
             </select>
-
-            <button id="calcularOperacion" type="button">Calcular Operación</button>
-
+        
+            <button class="btn" id="calcularOperacion" type="button">Calcular Operación</button>
+        
             <p id="resultadoOperacion"></p>
         </div>
+
         <div class="calculator-section section4">
             <label for="lado1">Clasificar Triangulos</label>
             <label for="lado1">Lado 1:</label>
@@ -86,7 +102,7 @@
             <label for="lado3">Lado 3:</label>
             <input id="lado3" placeholder="Ingresa el tercer lado" type="number">
         
-            <button id="clasificarTriangulo" type="button">Clasificar Triángulo</button>
+            <button class="btn" id="clasificarTriangulo" type="button">Clasificar Triángulo</button>
         
             <p id="resultadoClasificacion"></p>
         </div>
@@ -100,28 +116,42 @@
                 <option value="tijera">Tijera</option>
             </select>
         
-            <button id="jugar" type="button">Jugar</button>
+            <button class="btn" id="jugar" type="button">Jugar</button>
         
             <p id="resultadoJuego"></p>
         </div>
         
         <div class="input-section section5">
-            <label>Verificar numeros primos:</label>
-            <label for="numero1">Número 1:</label>
-            <input id="numero1" placeholder="Ingresa un número" type="number">
-
-            
-
-            <button id="verificarPrimos" type="button">Verificar Primos</button>
-
-            <p id="resultadoPrimos"></p>
+            <label>Verificar si un número es primo:</label>
+            <input id="numero" placeholder="Ingresa un número" type="number">
+            <button class="btn" id="verificarPrimo" type="button">Verificar Primo</button>
+            <p id="respuesta"></p>
         </div>
     </div>
 
+    <style>
+        footer {
+            text-align: center;
+            background-color: #333; 
+            padding: 10px; 
+        }
+
+        footer p.student {
+            display: inline-block;
+            border: 1px solid #d5d56f; 
+            padding: 5px; 
+            margin: 5px; 
+        }
+    </style>
+</head>
+<body>
     <footer>
-        <p>© 2024 - Guillermo Enrique Avila Villatoro</p>
+        <p class="student">© 2024 - Guillermo Enrique Avila Villatoro - SMSS142521</p>
+        <p class="student">© 2024 - Jonathan David Flores Dimas - SMSS121122</p>
+        <p class="student">© 2024 - Luisa Fernanda Medrano Cruz - SMSS037022</p>
     </footer>
 
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
     <script src="scripts.js"></script>
 </body>
 </html>
