@@ -90,7 +90,7 @@ footer {
 #interesante.girar-rebotar {
     animation: girarRebotar 1s ease-in-out;
 }
-/*Event*/
+/*Event and dising of the buttom*/
 .btn {
     display: inline-block;
     padding: 0.375rem 0.75rem;
@@ -117,7 +117,7 @@ footer {
     transform: scale(1.1);
     transition: transform 0.3s;
 }
-/*Event*/
+/*Event dising of the buttom*/
 
 @keyframes girarRebotar {
     0%, 20%, 50%, 80%, 100% {
